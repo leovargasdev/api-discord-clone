@@ -1,0 +1,11 @@
+{
+  "name": "default",
+  "type": "mongodb",
+  "host": "localhost",
+  "port": 27017,
+  "database": "discord",
+  "useUnifiedTopology": true,
+  "entities": [
+    "./src/schemas/*.ts"
+  ]
+}
