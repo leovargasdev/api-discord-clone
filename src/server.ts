@@ -1,11 +1,13 @@
-import express, { Request, Response, NextFunction } from 'express';
 import 'reflect-metadata';
+
+import express, { Request, Response, NextFunction } from 'express';
 import 'express-async-errors';
 
 import AppError from './errors/AppError';
+import './infra/typeorm';
 import routes from './routes';
+
 import './providers';
-import './typeorm';
 
 const app = express();
 

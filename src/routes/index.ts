@@ -1,11 +1,13 @@
 import { Router } from 'express';
-import CreateMessageService from '../services/CreateMessageService'
+import { container } from 'tsyringe';
+import CreateMessageService from '../services/CreateMessageService';
+
 const routes = Router();
 
 routes.post('/new-message', async (request, response) => {
   const { content, username, avatar_url } = request.body;
 
-  const createMessage = new CreateMessageService();
+  const createMessage = container.resolve(CreateMessageService);
 
   const message = await createMessage.execute({content, username, avatar_url});
 

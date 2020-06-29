@@ -1,6 +1,7 @@
-import { getRepository } from 'typeorm';
+import { inject, injectable } from 'tsyringe';
 
-import Message from '../schemas/Message';
+import Message from '../infra/schemas/Message';
+import IMessagesRepository from '../repositories/IMessagesRepository';
 
 interface Request {
   content: string;
@@ -8,15 +9,17 @@ interface Request {
   avatar_url: string;
 }
 
+@injectable()
 class CreateMessageService {
+  constructor(
+    @inject('MessagesRepository')
+    private messagesRepository: IMessagesRepository,
+  ) {}
+
   public async execute({
     content, username, avatar_url
-  }: Request): Promise<any> {
-    const messages = getRepository(Message);
-    // Não está entrando no create
-    const message = await messages.create({ content, username, avatar_url });
-    console.log('CreateMessageService', message);
-
+  }: Request): Promise<Message> {
+    const message = await this.messagesRepository.create({ content, username, avatar_url });
     return message;
   }
 }
