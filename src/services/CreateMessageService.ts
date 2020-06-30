@@ -1,4 +1,6 @@
 import { inject, injectable } from 'tsyringe';
+import { format } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
 
 import Message from '../infra/schemas/Message';
 import IMessagesRepository from '../repositories/IMessagesRepository';
@@ -16,10 +18,9 @@ class CreateMessageService {
     private messagesRepository: IMessagesRepository,
   ) {}
 
-  public async execute({
-    content, username, avatar_url
-  }: Request): Promise<Message> {
-    const message = await this.messagesRepository.create({ content, username, avatar_url });
+  public async execute({ content, username, avatar_url }: Request): Promise<Message> {
+    const date = format(new Date(), "EEEE', 'dd 'de' MMMM 'de' yyyy", {locale: ptBR});
+    const message = await this.messagesRepository.create({ content, username, avatar_url, date });
     return message;
   }
 }

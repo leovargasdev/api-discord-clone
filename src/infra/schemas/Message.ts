@@ -16,6 +16,9 @@ class Message {
   content: string;
 
   @Column()
+  date: string;
+
+  @Column()
   username: string;
 
   @Column()

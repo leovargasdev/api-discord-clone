@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { container } from 'tsyringe';
 import CreateMessageService from '../services/CreateMessageService';
+import ListMessagesService from '../services/ListMessagesService';
 
 const routes = Router();
 
@@ -15,9 +16,11 @@ routes.post('/new-message', async (request, response) => {
 });
 
 routes.get('/messages', async (request, response) => {
+  const listMessages = container.resolve(ListMessagesService);
 
+  const messages = await listMessages.execute();
 
-  return response.json({ ok: true });
+  return response.json(messages);
 });
 
 export default routes;
