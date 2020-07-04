@@ -1,10 +1,12 @@
 {
   "type": "mongodb",
-  "host": "localhost",
+  "url": "mongodb+srv://leo:148592@cluster0.c4oem.mongodb.net/discord?retryWrites=true&w=majority",
   "port": 27017,
-  "database": "discord",
+  "logging": true,
+  "synchronize": true,
+  "useNewUrlParser": true,
   "useUnifiedTopology": true,
   "entities": [
-    "./src/infra/schemas/*.ts"
+    "./src/infra/schemas/Message.ts"
   ]
 }
