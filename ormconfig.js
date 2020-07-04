@@ -1,6 +1,6 @@
-{
+module.exports = {
   "type": "mongodb",
-  "url": "mongodb+srv://leo:148592@cluster0.c4oem.mongodb.net/discord?retryWrites=true&w=majority",
+  "url": process.env.MONGO_URL,
   "port": 27017,
   "logging": true,
   "synchronize": true,
