@@ -7,6 +7,6 @@ module.exports = {
   "useNewUrlParser": true,
   "useUnifiedTopology": true,
   "entities": [
-    "./src/infra/schemas/Message.ts"
+    "./dist/infra/schemas/Message.js"
   ]
 }

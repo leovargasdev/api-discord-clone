@@ -32,4 +32,4 @@ app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
   });
 });
 
-app.listen(process.env.APP_PORT);
+app.listen(process.env.PORT || 3333);
