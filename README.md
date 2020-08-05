@@ -11,21 +11,15 @@
 - [Node.js](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Express](https://expressjs.com/pt-br/)
-- [Multer](https://github.com/expressjs/multer)
-- [](https://www.mongodb.com/)
+- [MongoDB](https://www.mongodb.com/)
 - [TypeORM](https://typeorm.io/#/)
-- [YARN](https://yarnpkg.com/)
 - [Date-fns](https://date-fns.org/)
-- [Eslint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-
 
 ## 💻 Sobre o projeto
 
 Api REST do projeto [discord-clone](https://github.com/LeeonardoVargas/discord-clone), essa api permite o envio e o armazenamento de mensagens do chat através do 
 
 [MongoDB](https://www.mongodb.com/).
-
 
 ## 📥 Instalação e execução
 
