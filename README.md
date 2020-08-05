@@ -3,66 +3,45 @@
 </h1>
 
 <h4 align = "center">
-  Estrutura base para um projeto Backend
+  Backend do clone do aplicativo <a href="https://discord.com/">Discord</a>
 </h4>
 
 ## :rocket: Tecnologias
 
--  [NodeJS](https://nodejs.org/en/)
--  [Docker](https://docs.docker.com/)
--  [Prettier](https://prettier.io/)
--  [ESLint](https://eslint.org/)
--  [YARN](https://yarnpkg.com/)
--  [Typescript](https://www.typescriptlang.org/)
--  [Express](https://expressjs.com/pt-br/)
--  [Typeorm](https://typeorm.io/)
--  [PostgreSQL](https://www.postgresql.org/)
+- [Node.js](https://nodejs.org/en/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Express](https://expressjs.com/pt-br/)
+- [Multer](https://github.com/expressjs/multer)
+- [](https://www.mongodb.com/)
+- [TypeORM](https://typeorm.io/#/)
+- [YARN](https://yarnpkg.com/)
+- [Date-fns](https://date-fns.org/)
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
 
-## 📥 Comandos usados para a construção do Projeto
+
+## 💻 Sobre o projeto
+
+Api REST do projeto [discord-clone](https://github.com/LeeonardoVargas/discord-clone), essa api permite o envio e o armazenamento de mensagens do chat através do 
+
+[MongoDB](https://www.mongodb.com/).
+
+
+## 📥 Instalação e execução
 
 ```bash
+# Clonando o repositório e acessando o diretório
+$ git clone https://github.com/LeeonardoVargas/api-discord-clone && cd api-discord-clone
 
-  # Inicializando o package.json
-  $ yarn init -y
+# Instalando as depedências
+$ yarn install
 
-  $ yarn add express && yarn add typescript @types/express -D
+# Criando container Docker
 
-  # Gerando o tsconfig.json
-  $ yarn tsc --init
+# Executando o Docker
 
-  # Pacote para executar o reload em projetos typescript
-  $ yarn add ts-node-dev -D
-  
-  # Pacotes do eslint e prettier
-  $ yarn add eslint -D
-  $ yarn eslint --init
-  $ yarn add -D @typescript-eslint/eslint-plugin@latest eslint-config-airbnb-base@latest eslint-plugin-import@^2.20.1 @typescript-eslint/parser@latest
+# Rodando migrations
 
-  # Reconhecer os imports dos .ts
-  $ yarn add -D eslint-import-resolver-typescript prettier eslint-config-prettier eslint-plugin-prettier
-  # typeorm: Permite usar typescript ao manipular o banco de dado, essa ténica se chama ORM(Object-relational mapping).
-  # bcryptjs:
-  # pg: Drive do banco PostgreSQL
-  $ yarn add typeorm bcryptjs pg
-  # Recursos typescript para o pacote bcryptjs
-  $ yarn add -D @types/bcryptjs
-  # Criando container Postgres
-  $ docker run --name postgres-database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
-  # Criando a database no database no container postgres-database  
-  $ docker exec -it  postgres-database psql -h localhost -U postgres -c "CREATE DATABASE database"
-  # Criando o migration
-  $ yarn typeorm migration:create -n CreateUsers
-  # Executanto a migration
-  $ yarn typeorm migration:run
-  $ yarn add jsonwebtoken
-  $ yarn add -D @types/jsonwebtoken
-  $ yarn add express-async-errors multer
-  $ yarn add -D @types/multer
-  # Criando o campo Avatar na tabela de Users
-  $ yarn typeorm migration:create -n CreateFieldAvatarInUsers
-
+# Executanto aplicação
+$ yarn dev:server
 ```
-## 💻 Extensões do VScode
-
-### editorconfig
-### eslint
