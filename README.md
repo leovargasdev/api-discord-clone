@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="logo" title="logo" src=".github/logo.png" width="700px" />
+  <img alt="DiscordClone" title="DiscordClone" src="https://github.com/LeeonardoVargas/discord-clone/blob/master/.github/logo.svg" width="300px" />
 </h1>
 
 <h4 align = "center">
