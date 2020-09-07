@@ -17,15 +17,19 @@
 
 ## 💻 Sobre o projeto
 
-Api REST do projeto [discord-clone](https://github.com/LeeonardoVargas/discord-clone), essa api permite o envio e o armazenamento de mensagens do chat através do 
-
-[MongoDB](https://www.mongodb.com/).
+Api REST do projeto [discord-clone](https://github.com/LeeonardoVargas/discord-clone), essa api permite o envio e o armazenamento de mensagens do chat através do [MongoDB](https://www.mongodb.com/).
 
 ## 📥 Instalação e execução
 
 ```bash
 # Clonando o repositório e acessando o diretório
 $ git clone https://github.com/LeeonardoVargas/api-discord-clone && cd api-discord-clone
+
+# Crie uma imagem no mongoDB para usar como banco de dados das mensagens
+$ docker run --name discord-mongodb -p 27017:27017 -d -t mongo
+
+# Execute o container
+$ docker start discord-mongodb
 
 # Instalando as depedências
 $ yarn install
