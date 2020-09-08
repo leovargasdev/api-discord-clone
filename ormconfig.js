@@ -1,15 +1,12 @@
 module.exports = {
   "type": "mongodb",
-  // "url": process.env.MONGO_URL,
-  "host": "localhost", // comentar em produção
-  "database": "discord", // comentar em produção
+  "url": process.env.MONGO_URL,
   "port": 27017,
-  // "logging": true,
+  "logging": true,
   "synchronize": true,
   "useNewUrlParser": true,
   "useUnifiedTopology": true,
   "entities": [
-    // "./dist/infra/schemas/Message.js"
-    "./src/infra/schemas/Message.ts"
+    "./dist/infra/schemas/Message.js"
   ]
 }
